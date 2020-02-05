@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A22B23EB348800940781 /* AppDelegate.m */; };
+		E1E0A22E23EB348900940781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22D23EB348900940781 /* Assets.xcassets */; };
+		E1E0A23123EB348900940781 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22F23EB348900940781 /* MainMenu.xib */; };
+		E1E0A23423EB348900940781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A23323EB348900940781 /* main.m */; };
+		E1E0A23F23EB348A00940781 /* MiniScreenReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A23E23EB348A00940781 /* MiniScreenReaderTests.m */; };
+		E1E0A24A23EB348A00940781 /* MiniScreenReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A24923EB348A00940781 /* MiniScreenReaderUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1E0A23B23EB348A00940781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E0A21F23EB348800940781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E0A22623EB348800940781;
+			remoteInfo = MiniScreenReader;
+		};
+		E1E0A24623EB348A00940781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E0A21F23EB348800940781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E0A22623EB348800940781;
+			remoteInfo = MiniScreenReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E1E0A22723EB348800940781 /* MiniScreenReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniScreenReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E0A22A23EB348800940781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E1E0A22B23EB348800940781 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E1E0A22D23EB348900940781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1E0A23023EB348900940781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E1E0A23223EB348900940781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E0A23323EB348900940781 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1E0A23523EB348900940781 /* MiniScreenReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniScreenReader.entitlements; sourceTree = "<group>"; };
+		E1E0A23A23EB348A00940781 /* MiniScreenReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniScreenReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E0A23E23EB348A00940781 /* MiniScreenReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniScreenReaderTests.m; sourceTree = "<group>"; };
+		E1E0A24023EB348A00940781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E0A24523EB348A00940781 /* MiniScreenReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniScreenReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E0A24923EB348A00940781 /* MiniScreenReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniScreenReaderUITests.m; sourceTree = "<group>"; };
+		E1E0A24B23EB348A00940781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1E0A22423EB348800940781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A23723EB348A00940781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A24223EB348A00940781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1E0A21E23EB348800940781 = {
+			isa = PBXGroup;
+			children = (
+				E1E0A22923EB348800940781 /* MiniScreenReader */,
+				E1E0A23D23EB348A00940781 /* MiniScreenReaderTests */,
+				E1E0A24823EB348A00940781 /* MiniScreenReaderUITests */,
+				E1E0A22823EB348800940781 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1E0A22823EB348800940781 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1E0A22723EB348800940781 /* MiniScreenReader.app */,
+				E1E0A23A23EB348A00940781 /* MiniScreenReaderTests.xctest */,
+				E1E0A24523EB348A00940781 /* MiniScreenReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1E0A22923EB348800940781 /* MiniScreenReader */ = {
+			isa = PBXGroup;
+			children = (
+				E1E0A22A23EB348800940781 /* AppDelegate.h */,
+				E1E0A22B23EB348800940781 /* AppDelegate.m */,
+				E1E0A22D23EB348900940781 /* Assets.xcassets */,
+				E1E0A22F23EB348900940781 /* MainMenu.xib */,
+				E1E0A23223EB348900940781 /* Info.plist */,
+				E1E0A23323EB348900940781 /* main.m */,
+				E1E0A23523EB348900940781 /* MiniScreenReader.entitlements */,
+			);
+			path = MiniScreenReader;
+			sourceTree = "<group>";
+		};
+		E1E0A23D23EB348A00940781 /* MiniScreenReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1E0A23E23EB348A00940781 /* MiniScreenReaderTests.m */,
+				E1E0A24023EB348A00940781 /* Info.plist */,
+			);
+			path = MiniScreenReaderTests;
+			sourceTree = "<group>";
+		};
+		E1E0A24823EB348A00940781 /* MiniScreenReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1E0A24923EB348A00940781 /* MiniScreenReaderUITests.m */,
+				E1E0A24B23EB348A00940781 /* Info.plist */,
+			);
+			path = MiniScreenReaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1E0A22623EB348800940781 /* MiniScreenReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E0A24E23EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReader" */;
+			buildPhases = (
+				E1E0A22323EB348800940781 /* Sources */,
+				E1E0A22423EB348800940781 /* Frameworks */,
+				E1E0A22523EB348800940781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniScreenReader;
+			productName = MiniScreenReader;
+			productReference = E1E0A22723EB348800940781 /* MiniScreenReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1E0A23923EB348A00940781 /* MiniScreenReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E0A25123EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReaderTests" */;
+			buildPhases = (
+				E1E0A23623EB348A00940781 /* Sources */,
+				E1E0A23723EB348A00940781 /* Frameworks */,
+				E1E0A23823EB348A00940781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1E0A23C23EB348A00940781 /* PBXTargetDependency */,
+			);
+			name = MiniScreenReaderTests;
+			productName = MiniScreenReaderTests;
+			productReference = E1E0A23A23EB348A00940781 /* MiniScreenReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1E0A24423EB348A00940781 /* MiniScreenReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E0A25423EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReaderUITests" */;
+			buildPhases = (
+				E1E0A24123EB348A00940781 /* Sources */,
+				E1E0A24223EB348A00940781 /* Frameworks */,
+				E1E0A24323EB348A00940781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1E0A24723EB348A00940781 /* PBXTargetDependency */,
+			);
+			name = MiniScreenReaderUITests;
+			productName = MiniScreenReaderUITests;
+			productReference = E1E0A24523EB348A00940781 /* MiniScreenReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1E0A21F23EB348800940781 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Nicholas Josephson";
+				TargetAttributes = {
+					E1E0A22623EB348800940781 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E1E0A23923EB348A00940781 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E1E0A22623EB348800940781;
+					};
+					E1E0A24423EB348A00940781 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E1E0A22623EB348800940781;
+					};
+				};
+			};
+			buildConfigurationList = E1E0A22223EB348800940781 /* Build configuration list for PBXProject "MiniScreenReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1E0A21E23EB348800940781;
+			productRefGroup = E1E0A22823EB348800940781 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1E0A22623EB348800940781 /* MiniScreenReader */,
+				E1E0A23923EB348A00940781 /* MiniScreenReaderTests */,
+				E1E0A24423EB348A00940781 /* MiniScreenReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1E0A22523EB348800940781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E0A22E23EB348900940781 /* Assets.xcassets in Resources */,
+				E1E0A23123EB348900940781 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A23823EB348A00940781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A24323EB348A00940781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1E0A22323EB348800940781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E0A23423EB348900940781 /* main.m in Sources */,
+				E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A23623EB348A00940781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E0A23F23EB348A00940781 /* MiniScreenReaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0A24123EB348A00940781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E0A24A23EB348A00940781 /* MiniScreenReaderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1E0A23C23EB348A00940781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1E0A22623EB348800940781 /* MiniScreenReader */;
+			targetProxy = E1E0A23B23EB348A00940781 /* PBXContainerItemProxy */;
+		};
+		E1E0A24723EB348A00940781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1E0A22623EB348800940781 /* MiniScreenReader */;
+			targetProxy = E1E0A24623EB348A00940781 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1E0A22F23EB348900940781 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1E0A23023EB348900940781 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1E0A24C23EB348A00940781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E1E0A24D23EB348A00940781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E1E0A24F23EB348A00940781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniScreenReader/MiniScreenReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MiniScreenReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E1E0A25023EB348A00940781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniScreenReader/MiniScreenReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MiniScreenReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E1E0A25223EB348A00940781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				INFOPLIST_FILE = MiniScreenReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniScreenReader.app/Contents/MacOS/MiniScreenReader";
+			};
+			name = Debug;
+		};
+		E1E0A25323EB348A00940781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				INFOPLIST_FILE = MiniScreenReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniScreenReader.app/Contents/MacOS/MiniScreenReader";
+			};
+			name = Release;
+		};
+		E1E0A25523EB348A00940781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				INFOPLIST_FILE = MiniScreenReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiniScreenReader;
+			};
+			name = Debug;
+		};
+		E1E0A25623EB348A00940781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DNH2Q695HA;
+				INFOPLIST_FILE = MiniScreenReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasjosephson.MiniScreenReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiniScreenReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1E0A22223EB348800940781 /* Build configuration list for PBXProject "MiniScreenReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E0A24C23EB348A00940781 /* Debug */,
+				E1E0A24D23EB348A00940781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E0A24E23EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E0A24F23EB348A00940781 /* Debug */,
+				E1E0A25023EB348A00940781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E0A25123EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E0A25223EB348A00940781 /* Debug */,
+				E1E0A25323EB348A00940781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E0A25423EB348A00940781 /* Build configuration list for PBXNativeTarget "MiniScreenReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E0A25523EB348A00940781 /* Debug */,
+				E1E0A25623EB348A00940781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1E0A21F23EB348800940781 /* Project object */;
+}
