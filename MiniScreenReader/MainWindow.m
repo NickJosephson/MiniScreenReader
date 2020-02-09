@@ -23,6 +23,8 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 
 @interface MainWindow ()
 
+@property NSSpeechSynthesizer* synth;
+
 @end
 
 @implementation MainWindow {
@@ -36,7 +38,9 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     NSDictionary *options = @{(__bridge NSString*)kAXTrustedCheckOptionPrompt : @YES};
     BOOL isProcessTrusted = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
     NSLog(@"Processed is trusted: %d", isProcessTrusted);
-   
+    
+    self.synth = [[NSSpeechSynthesizer alloc] init];
+    
     [self listenForKey];
 }
 
@@ -170,6 +174,10 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     CFStringRef windowTitle = value;
     
     NSLog(@"App Title: %@, Window Title: %@", appTitle, windowTitle);
+    
+    NSString* spokenDescription = [[NSString alloc] initWithFormat:@"%@ %@", appTitle, windowTitle];
+    
+    [self.synth startSpeakingString:spokenDescription];
 }
 
 - (void)listenForKey {

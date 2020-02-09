@@ -17,49 +17,12 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="270"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
-            <view key="contentView" misplaced="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2L-wF-C60">
-                        <rect key="frame" x="222" y="235" width="37" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="5EE-mE-IL2">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x49-4y-8US">
-                        <rect key="frame" x="222" y="151" width="37" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="lUb-zT-koK">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbT-uh-Nbv">
-                        <rect key="frame" x="222" y="127" width="37" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="IaH-wV-eAM">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-d0-fNE">
-                        <rect key="frame" x="222" y="103" width="37" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="RWt-ud-dV1">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-gD-6aq">
-                        <rect key="frame" x="205" y="183" width="70" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-gD-6aq">
+                        <rect key="frame" x="205" y="118" width="70" height="32"/>
                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3ba-iS-fHh">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -69,6 +32,14 @@
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="uM4-gD-6aq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="MNx-n4-E4z"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uM4-gD-6aq" secondAttribute="trailing" constant="20" symbolic="YES" id="j81-Hb-EsR"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uM4-gD-6aq" secondAttribute="bottom" constant="20" symbolic="YES" id="tIm-im-GQa"/>
+                    <constraint firstItem="uM4-gD-6aq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="xZ2-sT-Sh4"/>
+                    <constraint firstItem="uM4-gD-6aq" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="yzs-cZ-Q4m"/>
+                    <constraint firstItem="uM4-gD-6aq" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="zYw-No-4nj"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
