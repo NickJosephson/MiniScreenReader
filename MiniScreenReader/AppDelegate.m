@@ -11,8 +11,6 @@
 
 @interface AppDelegate ()
 
-@property MainWindow* mainWindowController;
-
 @end
 
 @implementation AppDelegate
@@ -22,8 +20,6 @@
     MainWindow* newWindowController = [[MainWindow alloc] initWithWindowNibName:@"MainWindow"];
     [self setMainWindowController:newWindowController];
     [self.mainWindowController showWindow:self];
-    
-    
 }
 
 

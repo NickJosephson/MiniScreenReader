@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainWindow : NSWindowController
 
+- (void)startNotifications;
+- (void)stopNotifications;
+- (void)logCurrentWindow;
+
 @end
 
 NS_ASSUME_NONNULL_END
