@@ -1,86 +1,62 @@
 //
-//  MainWindow.m
+//  MSRScreenReader.m
 //  MiniScreenReader
 //
-//  Created by Nicholas Josephson on 2020-02-05.
+//  Created by Nicholas Josephson on 2020-02-25.
 //  Copyright © 2020 Nicholas Josephson. All rights reserved.
 //
 
-#import "MainWindow.h"
-#import "AppDelegate.h"
-
+#import "MSRScreenReader.h"
 #import <ApplicationServices/ApplicationServices.h>
 
-
 void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef notification, CFDictionaryRef info, void *refcon) {
-    MainWindow* controller = (__bridge MainWindow*)refcon;
+    MSRScreenReader* screenReader = (__bridge MSRScreenReader*)refcon;
     
     NSLog(@"Notification received: %@", notification);
-    [controller logCurrentWindow];
-    [controller stopNotifications];
-    [controller startNotifications];
+    [screenReader speakCurrentWindow];
+    [screenReader stopNotifications];
+    [screenReader startNotifications];
 }
 
-@interface MainWindow ()
+@interface MSRScreenReader ()
 
 @property NSSpeechSynthesizer* synth;
 
 @end
 
-@implementation MainWindow {
+
+@implementation MSRScreenReader {
     AXObserverRef _observer;
     AXUIElementRef _currentApp;
 }
 
-- (void)windowDidLoad {
-    [super windowDidLoad];
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _isRunning = NO;
+    }
+    return self;
+}
+
+
+- (void)start {
     NSDictionary *options = @{(__bridge NSString*)kAXTrustedCheckOptionPrompt : @YES};
     BOOL isProcessTrusted = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
     NSLog(@"Processed is trusted: %d", isProcessTrusted);
     
+    _isRunning = YES;
     self.synth = [[NSSpeechSynthesizer alloc] init];
     
     [self listenForKey];
+    [self startNotifications];
+    [self speakCurrentWindow];
 }
 
-- (IBAction)start:(NSButton *)sender {
-    [self startNotifications];
-    [self logCurrentWindow];
-    
-//    AXUIElementRef systemWide = AXUIElementCreateSystemWide();
-//
-//    CFTypeRef value;
-//    AXError error;
-//
-//    error = AXUIElementCopyAttributeValue(systemWide, kAXFocusedApplicationAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    AXUIElementRef currentApp = value;
-//
-//    error = AXUIElementCopyAttributeValue(currentApp, kAXMainWindowAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    AXUIElementRef mainWindow = value;
-//
-//    error = AXUIElementCopyAttributeValue(mainWindow, kAXChildrenAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    CFArrayRef children = value;
-//
-//    for (int i = 0; i < CFArrayGetCount(children); i++) {
-//        AXUIElementRef child = CFArrayGetValueAtIndex(children, i);
-//
-//        error = AXUIElementCopyAttributeValue(child, kAXRoleAttribute, &value);
-//        //NSLog(@"Error: %d", (int)error);
-//
-//        CFShow(value);
-//    }
-    
-//    AXError currError = 0;
-//    while(currError == 0) {
-//
-//    }
+- (void)stop {
+    [self stopNotifications];
+    [self.synth stopSpeaking];
+    _isRunning = NO;
 }
 
 - (void)startNotifications {
@@ -140,7 +116,7 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     }
 }
 
-- (void)logCurrentWindow {
+- (void)speakCurrentWindow {
     AXUIElementRef systemWide = AXUIElementCreateSystemWide();
     CFTypeRef value;
     AXError error;
@@ -219,3 +195,37 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 
 @end
 
+
+//    AXUIElementRef systemWide = AXUIElementCreateSystemWide();
+//
+//    CFTypeRef value;
+//    AXError error;
+//
+//    error = AXUIElementCopyAttributeValue(systemWide, kAXFocusedApplicationAttribute, &value);
+//    NSLog(@"Error: %d", (int)error);
+//
+//    AXUIElementRef currentApp = value;
+//
+//    error = AXUIElementCopyAttributeValue(currentApp, kAXMainWindowAttribute, &value);
+//    NSLog(@"Error: %d", (int)error);
+//
+//    AXUIElementRef mainWindow = value;
+//
+//    error = AXUIElementCopyAttributeValue(mainWindow, kAXChildrenAttribute, &value);
+//    NSLog(@"Error: %d", (int)error);
+//
+//    CFArrayRef children = value;
+//
+//    for (int i = 0; i < CFArrayGetCount(children); i++) {
+//        AXUIElementRef child = CFArrayGetValueAtIndex(children, i);
+//
+//        error = AXUIElementCopyAttributeValue(child, kAXRoleAttribute, &value);
+//        //NSLog(@"Error: %d", (int)error);
+//
+//        CFShow(value);
+//    }
+    
+//    AXError currError = 0;
+//    while(currError == 0) {
+//
+//    }

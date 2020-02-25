@@ -1,8 +1,8 @@
 //
-//  MainWindow.h
+//  MSRScreenReader.h
 //  MiniScreenReader
 //
-//  Created by Nicholas Josephson on 2020-02-05.
+//  Created by Nicholas Josephson on 2020-02-25.
 //  Copyright © 2020 Nicholas Josephson. All rights reserved.
 //
 
@@ -10,11 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainWindow : NSWindowController
+@interface MSRScreenReader : NSObject
 
+@property (readonly) BOOL isRunning;
+
+- (void)start;
+- (void)stop;
 - (void)startNotifications;
 - (void)stopNotifications;
-- (void)logCurrentWindow;
+- (void)speakCurrentWindow;
 
 @end
 

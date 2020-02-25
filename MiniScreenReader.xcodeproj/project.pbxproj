@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E135DF97240504070026FB5D /* MSRScreenReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E135DF96240504070026FB5D /* MSRScreenReader.m */; };
 		E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A22B23EB348800940781 /* AppDelegate.m */; };
 		E1E0A22E23EB348900940781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22D23EB348900940781 /* Assets.xcassets */; };
 		E1E0A23123EB348900940781 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22F23EB348900940781 /* MainMenu.xib */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E135DF95240504070026FB5D /* MSRScreenReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRScreenReader.h; sourceTree = "<group>"; };
+		E135DF96240504070026FB5D /* MSRScreenReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRScreenReader.m; sourceTree = "<group>"; };
 		E1E0A22723EB348800940781 /* MiniScreenReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniScreenReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E0A22A23EB348800940781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1E0A22B23EB348800940781 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +85,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E135DF94240503C20026FB5D /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E1E0A25F23EB37B800940781 /* MainWindow.h */,
+				E1E0A26023EB37B800940781 /* MainWindow.m */,
+				E1E0A26123EB37B800940781 /* MainWindow.xib */,
+				E1E0A22F23EB348900940781 /* MainMenu.xib */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E135DF98240504250026FB5D /* Screen Reader */ = {
+			isa = PBXGroup;
+			children = (
+				E135DF95240504070026FB5D /* MSRScreenReader.h */,
+				E135DF96240504070026FB5D /* MSRScreenReader.m */,
+			);
+			path = "Screen Reader";
+			sourceTree = "<group>";
+		};
 		E1E0A21E23EB348800940781 = {
 			isa = PBXGroup;
 			children = (
@@ -106,16 +129,14 @@
 		E1E0A22923EB348800940781 /* MiniScreenReader */ = {
 			isa = PBXGroup;
 			children = (
+				E1E0A23323EB348900940781 /* main.m */,
 				E1E0A22A23EB348800940781 /* AppDelegate.h */,
 				E1E0A22B23EB348800940781 /* AppDelegate.m */,
-				E1E0A22D23EB348900940781 /* Assets.xcassets */,
-				E1E0A22F23EB348900940781 /* MainMenu.xib */,
+				E135DF98240504250026FB5D /* Screen Reader */,
+				E135DF94240503C20026FB5D /* User Interface */,
 				E1E0A23223EB348900940781 /* Info.plist */,
-				E1E0A23323EB348900940781 /* main.m */,
 				E1E0A23523EB348900940781 /* MiniScreenReader.entitlements */,
-				E1E0A25F23EB37B800940781 /* MainWindow.h */,
-				E1E0A26023EB37B800940781 /* MainWindow.m */,
-				E1E0A26123EB37B800940781 /* MainWindow.xib */,
+				E1E0A22D23EB348900940781 /* Assets.xcassets */,
 			);
 			path = MiniScreenReader;
 			sourceTree = "<group>";
@@ -277,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E0A23423EB348900940781 /* main.m in Sources */,
+				E135DF97240504070026FB5D /* MSRScreenReader.m in Sources */,
 				E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */,
 				E1E0A26223EB37B800940781 /* MainWindow.m in Sources */,
 			);
