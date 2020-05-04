@@ -8,6 +8,9 @@
 
 #import "MSRScreenReader.h"
 #import <ApplicationServices/ApplicationServices.h>
+#import "MSRUISystem.h"
+#import "MSRUIApp.h"
+#import "MSRUIWindow.h"
 
 void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef notification, CFDictionaryRef info, void *refcon) {
     MSRScreenReader* screenReader = (__bridge MSRScreenReader*)refcon;
@@ -28,6 +31,12 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 @implementation MSRScreenReader {
     AXObserverRef _observer;
     AXUIElementRef _currentApp;
+}
+
+- (void)dealloc {
+    [self stop];
+    CFRelease(_observer);
+    CFRelease(_currentApp);
 }
 
 - (instancetype)init
@@ -61,43 +70,58 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 
 - (void)startNotifications {
     AXUIElementRef systemWide = AXUIElementCreateSystemWide();
-    CFTypeRef value;
     AXError error;
 
+    CFTypeRef value;
     error = AXUIElementCopyAttributeValue(systemWide, kAXFocusedApplicationAttribute, &value);
     if (error) {
         NSLog(@"Error getting focused application: %d", (int)error);
+        CFRelease(systemWide);
         return;
     }
-    self->_currentApp = value;
+    if (_currentApp) {
+        CFRelease(_currentApp);
+    }
+    _currentApp = value;
     
     pid_t currentAppPID;
     AXUIElementGetPid(self->_currentApp, &currentAppPID);
     if (error) {
         NSLog(@"Error getting PID for UIElement: %d", (int)error);
+        CFRelease(systemWide);
         return;
     }
     
     AXObserverCallbackWithInfo observerFunc = &callbackFunc;
-    error = AXObserverCreateWithInfoCallback(currentAppPID, observerFunc, &self->_observer);
+    AXObserverRef observer;
+    error = AXObserverCreateWithInfoCallback(currentAppPID, observerFunc, &observer);
     if (error) {
         NSLog(@"Error creating observer: %d", (int)error);
+        CFRelease(systemWide);
         return;
     }
+    if (_observer) {
+        CFRelease(_observer);
+    }
+    _observer = observer;
 
-    CFRunLoopAddSource(CFRunLoopGetCurrent(), AXObserverGetRunLoopSource(self->_observer), kCFRunLoopDefaultMode);
+    CFRunLoopAddSource(CFRunLoopGetCurrent(), AXObserverGetRunLoopSource(_observer), kCFRunLoopDefaultMode);
 
-    error = AXObserverAddNotification(self->_observer, self->_currentApp, kAXApplicationDeactivatedNotification, (__bridge void * _Nullable)(self));
+    error = AXObserverAddNotification(_observer, self->_currentApp, kAXApplicationDeactivatedNotification, (void * _Nullable)(self));
     if (error) {
         NSLog(@"Error adding \"%@\" notification to observer: %d", kAXApplicationDeactivatedNotification, (int)error);
+        CFRelease(systemWide);
         return;
     }
     
-    error = AXObserverAddNotification(self->_observer, self->_currentApp, kAXFocusedWindowChangedNotification, (__bridge void * _Nullable)(self));
+    error = AXObserverAddNotification(_observer, self->_currentApp, kAXFocusedWindowChangedNotification, (void * _Nullable)(self));
     if (error) {
         NSLog(@"Error adding \"%@\" notification to observer: %d", kAXFocusedWindowChangedNotification, (int)error);
+        CFRelease(systemWide);
         return;
     }
+    
+    CFRelease(systemWide);
 }
 
 - (void)stopNotifications {
@@ -117,37 +141,12 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 }
 
 - (void)speakCurrentWindow {
-    AXUIElementRef systemWide = AXUIElementCreateSystemWide();
-    CFTypeRef value;
-    AXError error;
-
-    error = AXUIElementCopyAttributeValue(systemWide, kAXFocusedApplicationAttribute, &value);
-    if (error) {
-        NSLog(@"Error getting focused application: %d", (int)error);
-        return;
-    }
-    AXUIElementRef currentApp = value;
-
-    error = AXUIElementCopyAttributeValue(currentApp, kAXTitleAttribute, &value);
-    if (error) {
-        NSLog(@"Error getting window title: %d", (int)error);
-        return;
-    }
-    CFStringRef appTitle = value;
+    MSRUISystem *system = [[MSRUISystem alloc] initSystemWide];
+    MSRUIApp *focusedApp = [system getFocusedApp];
+    MSRUIWindow *focusedWindow = [focusedApp getFocusedWindow];
     
-    error = AXUIElementCopyAttributeValue(currentApp, kAXFocusedWindowAttribute, &value);
-    if (error) {
-        NSLog(@"Error getting focused window: %d", (int)error);
-        return;
-    }
-    AXUIElementRef focusedWindow = value;
-
-    error = AXUIElementCopyAttributeValue(focusedWindow, kAXTitleAttribute, &value);
-    if (error) {
-        NSLog(@"Error getting window title: %d", (int)error);
-        return;
-    }
-    CFStringRef windowTitle = value;
+    NSString *appTitle = [focusedApp getLabel];
+    NSString *windowTitle = [focusedWindow getLabel];
     
     NSLog(@"App Title: %@, Window Title: %@", appTitle, windowTitle);
     

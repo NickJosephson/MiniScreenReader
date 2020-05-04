@@ -17,6 +17,10 @@
 		E1E0A25923EB34D000940781 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E0A25823EB34D000940781 /* ApplicationServices.framework */; };
 		E1E0A26223EB37B800940781 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A26023EB37B800940781 /* MainWindow.m */; };
 		E1E0A26323EB37B800940781 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A26123EB37B800940781 /* MainWindow.xib */; };
+		E1E83F3924566DF400CA5438 /* MSRUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F3824566DF400CA5438 /* MSRUIElement.m */; };
+		E1E83F3C245672FE00CA5438 /* MSRUIApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F3B245672FE00CA5438 /* MSRUIApp.m */; };
+		E1E83F3F245673D800CA5438 /* MSRUIWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F3E245673D700CA5438 /* MSRUIWindow.m */; };
+		E1E83F42245679CF00CA5438 /* MSRUISystem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F41245679CF00CA5438 /* MSRUISystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,14 @@
 		E1E0A25F23EB37B800940781 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		E1E0A26023EB37B800940781 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		E1E0A26123EB37B800940781 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		E1E83F3724566DF400CA5438 /* MSRUIElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRUIElement.h; sourceTree = "<group>"; };
+		E1E83F3824566DF400CA5438 /* MSRUIElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRUIElement.m; sourceTree = "<group>"; };
+		E1E83F3A245672FE00CA5438 /* MSRUIApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRUIApp.h; sourceTree = "<group>"; };
+		E1E83F3B245672FE00CA5438 /* MSRUIApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRUIApp.m; sourceTree = "<group>"; };
+		E1E83F3D245673D700CA5438 /* MSRUIWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRUIWindow.h; sourceTree = "<group>"; };
+		E1E83F3E245673D700CA5438 /* MSRUIWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRUIWindow.m; sourceTree = "<group>"; };
+		E1E83F40245679CF00CA5438 /* MSRUISystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRUISystem.h; sourceTree = "<group>"; };
+		E1E83F41245679CF00CA5438 /* MSRUISystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRUISystem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,14 @@
 			children = (
 				E135DF95240504070026FB5D /* MSRScreenReader.h */,
 				E135DF96240504070026FB5D /* MSRScreenReader.m */,
+				E1E83F3724566DF400CA5438 /* MSRUIElement.h */,
+				E1E83F3824566DF400CA5438 /* MSRUIElement.m */,
+				E1E83F40245679CF00CA5438 /* MSRUISystem.h */,
+				E1E83F41245679CF00CA5438 /* MSRUISystem.m */,
+				E1E83F3A245672FE00CA5438 /* MSRUIApp.h */,
+				E1E83F3B245672FE00CA5438 /* MSRUIApp.m */,
+				E1E83F3D245673D700CA5438 /* MSRUIWindow.h */,
+				E1E83F3E245673D700CA5438 /* MSRUIWindow.m */,
 			);
 			path = "Screen Reader";
 			sourceTree = "<group>";
@@ -229,7 +249,7 @@
 		E1E0A21F23EB348800940781 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Nicholas Josephson";
 				TargetAttributes = {
 					E1E0A22623EB348800940781 = {
@@ -298,8 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E0A23423EB348900940781 /* main.m in Sources */,
+				E1E83F3F245673D800CA5438 /* MSRUIWindow.m in Sources */,
+				E1E83F3924566DF400CA5438 /* MSRUIElement.m in Sources */,
 				E135DF97240504070026FB5D /* MSRScreenReader.m in Sources */,
 				E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */,
+				E1E83F42245679CF00CA5438 /* MSRUISystem.m in Sources */,
+				E1E83F3C245672FE00CA5438 /* MSRUIApp.m in Sources */,
 				E1E0A26223EB37B800940781 /* MainWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MiniScreenReader/MiniScreenReader.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DNH2Q695HA;
@@ -480,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MiniScreenReader/MiniScreenReader.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DNH2Q695HA;
