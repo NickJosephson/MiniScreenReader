@@ -21,6 +21,7 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     [screenReader startNotifications];
 }
 
+
 @interface MSRScreenReader ()
 
 @property NSSpeechSynthesizer* synth;
@@ -47,7 +48,6 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     }
     return self;
 }
-
 
 - (void)start {
     NSDictionary *options = @{(__bridge NSString*)kAXTrustedCheckOptionPrompt : @YES};
@@ -193,38 +193,3 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 }
 
 @end
-
-
-//    AXUIElementRef systemWide = AXUIElementCreateSystemWide();
-//
-//    CFTypeRef value;
-//    AXError error;
-//
-//    error = AXUIElementCopyAttributeValue(systemWide, kAXFocusedApplicationAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    AXUIElementRef currentApp = value;
-//
-//    error = AXUIElementCopyAttributeValue(currentApp, kAXMainWindowAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    AXUIElementRef mainWindow = value;
-//
-//    error = AXUIElementCopyAttributeValue(mainWindow, kAXChildrenAttribute, &value);
-//    NSLog(@"Error: %d", (int)error);
-//
-//    CFArrayRef children = value;
-//
-//    for (int i = 0; i < CFArrayGetCount(children); i++) {
-//        AXUIElementRef child = CFArrayGetValueAtIndex(children, i);
-//
-//        error = AXUIElementCopyAttributeValue(child, kAXRoleAttribute, &value);
-//        //NSLog(@"Error: %d", (int)error);
-//
-//        CFShow(value);
-//    }
-    
-//    AXError currError = 0;
-//    while(currError == 0) {
-//
-//    }
