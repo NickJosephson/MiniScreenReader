@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) AXUIElementRef reference;
 
 - (instancetype)initWithReference:(AXUIElementRef)reference;
-- (NSString *)getLabel;
+- (NSString *)getTitle;
 - (NSArray<MSRUIElement *> *)getChildren;
 - (MSRUIElement * _Nullable)getParent;
 

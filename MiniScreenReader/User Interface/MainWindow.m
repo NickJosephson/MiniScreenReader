@@ -34,5 +34,9 @@
     }
 }
 
+- (IBAction)walk:(NSButton *)sender {
+    [self.screenReader walkTree];
+}
+
 @end
 

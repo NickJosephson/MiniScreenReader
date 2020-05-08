@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)startNotifications;
 - (void)stopNotifications;
 - (void)speakCurrentWindow;
+- (void)walkTree;
 
 @end
 

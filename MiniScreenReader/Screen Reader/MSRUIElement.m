@@ -26,13 +26,13 @@
     }
 }
 
-- (NSString *)getLabel {
+- (NSString *)getTitle {
     CFTypeRef value;
 
     AXError error = AXUIElementCopyAttributeValue(self.reference, kAXTitleAttribute, &value);
     if (error) {
-        NSLog(@"Error getting title attribute: %d", (int)error);
-        return @"";
+        //NSLog(@"Error getting title attribute: %d", (int)error);
+        return @"No Title";
     }
     
     CFStringRef appTitle = value;
@@ -40,11 +40,43 @@
 }
 
 - (NSArray<MSRUIElement *> *)getChildren {
-    return @[];
+    CFTypeRef value;
+
+    AXError error = AXUIElementCopyAttributeValue(self.reference, kAXChildrenAttribute, &value);
+    if (error) {
+        //NSLog(@"Error getting children attribute: %d", (int)error);
+        return @[];
+    }
+    CFArrayRef childrenAX = (CFArrayRef)value;
+
+    NSMutableArray<MSRUIElement *> *children = [[NSMutableArray alloc] init];
+    
+    CFIndex length = CFArrayGetCount(childrenAX);
+    for (CFIndex i = 0; i < length; i++) {
+        AXUIElementRef currentAXRef = CFArrayGetValueAtIndex(childrenAX, i);
+
+        MSRUIElement *currentChild = [[MSRUIElement alloc] initWithReference:currentAXRef];
+        [children addObject:currentChild];
+    }
+
+    CFRelease(childrenAX);
+    return children;
 }
 
 - (MSRUIElement *)getParent {
-    return NULL;
+    CFTypeRef value;
+
+    AXError error = AXUIElementCopyAttributeValue(self.reference, kAXParentAttribute, &value);
+    if (error) {
+        NSLog(@"Error getting parent attribute: %d", (int)error);
+        return NULL;
+    }
+    AXUIElementRef parentAX = value;
+
+    MSRUIElement *parent = [[MSRUIElement alloc] initWithReference:parentAX];
+    
+    CFRelease(parentAX);
+    return parent;
 }
 
 - (void)dealloc {

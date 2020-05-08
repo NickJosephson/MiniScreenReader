@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,24 +22,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-gD-6aq">
-                        <rect key="frame" x="205" y="118" width="70" height="32"/>
-                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3ba-iS-fHh">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="message"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="start:" target="-2" id="rrj-Of-blx"/>
-                        </connections>
-                    </button>
+                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxw-i1-qhz">
+                        <rect key="frame" x="211" y="108" width="58" height="54"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-gD-6aq">
+                                <rect key="frame" x="-6" y="26" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3ba-iS-fHh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="start:" target="-2" id="rrj-Of-blx"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-yB-7tj">
+                                <rect key="frame" x="-6" y="-7" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Walk" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6rU-E4-0Co">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="walk:" target="-2" id="maS-d9-LE9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uM4-gD-6aq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="MNx-n4-E4z"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uM4-gD-6aq" secondAttribute="trailing" constant="20" symbolic="YES" id="j81-Hb-EsR"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uM4-gD-6aq" secondAttribute="bottom" constant="20" symbolic="YES" id="tIm-im-GQa"/>
-                    <constraint firstItem="uM4-gD-6aq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="xZ2-sT-Sh4"/>
-                    <constraint firstItem="uM4-gD-6aq" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="yzs-cZ-Q4m"/>
-                    <constraint firstItem="uM4-gD-6aq" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="zYw-No-4nj"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nxw-i1-qhz" secondAttribute="bottom" constant="20" symbolic="YES" id="Czs-PX-Gao"/>
+                    <constraint firstItem="nxw-i1-qhz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="DCb-EU-FgU"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nxw-i1-qhz" secondAttribute="trailing" constant="20" symbolic="YES" id="Tjp-eX-PF5"/>
+                    <constraint firstItem="nxw-i1-qhz" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="Uv7-pY-A6R"/>
+                    <constraint firstItem="nxw-i1-qhz" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="doq-NC-gue"/>
+                    <constraint firstItem="nxw-i1-qhz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="gCR-vm-QJV"/>
                 </constraints>
             </view>
             <connections>

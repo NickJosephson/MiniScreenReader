@@ -40,8 +40,7 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     CFRelease(_currentApp);
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _isRunning = NO;
@@ -145,14 +144,36 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     MSRUIApp *focusedApp = [system getFocusedApp];
     MSRUIWindow *focusedWindow = [focusedApp getFocusedWindow];
     
-    NSString *appTitle = [focusedApp getLabel];
-    NSString *windowTitle = [focusedWindow getLabel];
+    NSString *appTitle = [focusedApp getTitle];
+    NSString *windowTitle = [focusedWindow getTitle];
     
     NSLog(@"App Title: %@, Window Title: %@", appTitle, windowTitle);
     
     NSString* spokenDescription = [[NSString alloc] initWithFormat:@"%@ %@", appTitle, windowTitle];
     
     [self.synth startSpeakingString:spokenDescription];
+}
+
+- (void)walkTree {
+    MSRUISystem *root = [[MSRUISystem alloc] initSystemWide];
+    [self walkTreeStartingAt:[root getFocusedApp] withDepth:0];
+}
+
+- (void)walkTreeStartingAt:(MSRUIElement *)root withDepth:(int)depth {
+    NSMutableString *output = [[NSMutableString alloc] initWithString:@"WALK "];
+    for (int i = 0; i < depth; i++) {
+        [output appendString:@"-"];
+    }
+    NSString *title = [root getTitle];
+    if (title) {
+        [output appendString:title];
+    }
+    
+    NSLog(@"%@", output);
+    
+    for (MSRUIElement *child in [root getChildren]) {
+        [self walkTreeStartingAt:child withDepth:++depth];
+    }
 }
 
 - (void)listenForKey {
