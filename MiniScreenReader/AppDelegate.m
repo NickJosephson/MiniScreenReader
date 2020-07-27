@@ -16,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    MainWindow* newWindowController = [[MainWindow alloc] initWithWindowNibName:@"MainWindow"];
+    MainWindowController* newWindowController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindow"];
     [self setMainWindowController:newWindowController];
     [self.mainWindowController showWindow:self];
 }

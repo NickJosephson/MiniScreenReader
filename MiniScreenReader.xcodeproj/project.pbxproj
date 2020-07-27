@@ -15,7 +15,7 @@
 		E1E0A23F23EB348A00940781 /* MiniScreenReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A23E23EB348A00940781 /* MiniScreenReaderTests.m */; };
 		E1E0A24A23EB348A00940781 /* MiniScreenReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A24923EB348A00940781 /* MiniScreenReaderUITests.m */; };
 		E1E0A25923EB34D000940781 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E0A25823EB34D000940781 /* ApplicationServices.framework */; };
-		E1E0A26223EB37B800940781 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A26023EB37B800940781 /* MainWindow.m */; };
+		E1E0A26223EB37B800940781 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A26023EB37B800940781 /* MainWindowController.m */; };
 		E1E0A26323EB37B800940781 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A26123EB37B800940781 /* MainWindow.xib */; };
 		E1E83F3924566DF400CA5438 /* MSRUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F3824566DF400CA5438 /* MSRUIElement.m */; };
 		E1E83F3C245672FE00CA5438 /* MSRUIApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E83F3B245672FE00CA5438 /* MSRUIApp.m */; };
@@ -58,8 +58,8 @@
 		E1E0A24923EB348A00940781 /* MiniScreenReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniScreenReaderUITests.m; sourceTree = "<group>"; };
 		E1E0A24B23EB348A00940781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E0A25823EB34D000940781 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		E1E0A25F23EB37B800940781 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
-		E1E0A26023EB37B800940781 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		E1E0A25F23EB37B800940781 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		E1E0A26023EB37B800940781 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		E1E0A26123EB37B800940781 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		E1E83F3724566DF400CA5438 /* MSRUIElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRUIElement.h; sourceTree = "<group>"; };
 		E1E83F3824566DF400CA5438 /* MSRUIElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRUIElement.m; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		E135DF94240503C20026FB5D /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				E1E0A25F23EB37B800940781 /* MainWindow.h */,
-				E1E0A26023EB37B800940781 /* MainWindow.m */,
+				E1E0A25F23EB37B800940781 /* MainWindowController.h */,
+				E1E0A26023EB37B800940781 /* MainWindowController.m */,
 				E1E0A26123EB37B800940781 /* MainWindow.xib */,
 				E1E0A22F23EB348900940781 /* MainMenu.xib */,
 			);
@@ -324,7 +324,7 @@
 				E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */,
 				E1E83F42245679CF00CA5438 /* MSRUISystem.m in Sources */,
 				E1E83F3C245672FE00CA5438 /* MSRUIApp.m in Sources */,
-				E1E0A26223EB37B800940781 /* MainWindow.m in Sources */,
+				E1E0A26223EB37B800940781 /* MainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

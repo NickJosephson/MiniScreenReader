@@ -6,17 +6,17 @@
 //  Copyright © 2020 Nicholas Josephson. All rights reserved.
 //
 
-#import "MainWindow.h"
+#import "MainWindowController.h"
 #import "MSRScreenReader.h"
 
-@interface MainWindow ()
+@interface MainWindowController ()
 
 @property MSRScreenReader* screenReader;
 @property (weak) IBOutlet NSButton *startStopButton;
 
 @end
 
-@implementation MainWindow
+@implementation MainWindowController
 
 - (void)windowDidLoad {
     [super windowDidLoad];
