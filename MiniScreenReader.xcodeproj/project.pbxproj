@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E135DF97240504070026FB5D /* MSRScreenReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E135DF96240504070026FB5D /* MSRScreenReader.m */; };
+		E1B9D47D24CECA5500398B7E /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B9D47C24CECA5500398B7E /* SplitViewController.m */; };
+		E1B9D48024CECBDC00398B7E /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B9D47F24CECBDC00398B7E /* OutlineViewController.m */; };
 		E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0A22B23EB348800940781 /* AppDelegate.m */; };
 		E1E0A22E23EB348900940781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22D23EB348900940781 /* Assets.xcassets */; };
 		E1E0A23123EB348900940781 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E0A22F23EB348900940781 /* MainMenu.xib */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		E135DF95240504070026FB5D /* MSRScreenReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRScreenReader.h; sourceTree = "<group>"; };
 		E135DF96240504070026FB5D /* MSRScreenReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRScreenReader.m; sourceTree = "<group>"; };
+		E1B9D47B24CECA5500398B7E /* SplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
+		E1B9D47C24CECA5500398B7E /* SplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
+		E1B9D47E24CECBDC00398B7E /* OutlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
+		E1B9D47F24CECBDC00398B7E /* OutlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
 		E1E0A22723EB348800940781 /* MiniScreenReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniScreenReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E0A22A23EB348800940781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1E0A22B23EB348800940781 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +110,10 @@
 				E1E0A26023EB37B800940781 /* MainWindowController.m */,
 				E1E0A26123EB37B800940781 /* MainWindow.xib */,
 				E1E0A22F23EB348900940781 /* MainMenu.xib */,
+				E1B9D47B24CECA5500398B7E /* SplitViewController.h */,
+				E1B9D47C24CECA5500398B7E /* SplitViewController.m */,
+				E1B9D47E24CECBDC00398B7E /* OutlineViewController.h */,
+				E1B9D47F24CECBDC00398B7E /* OutlineViewController.m */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -324,6 +334,8 @@
 				E1E0A22C23EB348800940781 /* AppDelegate.m in Sources */,
 				E1E83F42245679CF00CA5438 /* MSRUISystem.m in Sources */,
 				E1E83F3C245672FE00CA5438 /* MSRUIApp.m in Sources */,
+				E1B9D48024CECBDC00398B7E /* OutlineViewController.m in Sources */,
+				E1B9D47D24CECA5500398B7E /* SplitViewController.m in Sources */,
 				E1E0A26223EB37B800940781 /* MainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
