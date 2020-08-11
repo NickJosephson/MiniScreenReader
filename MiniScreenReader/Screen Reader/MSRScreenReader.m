@@ -156,7 +156,12 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
 
 - (void)walkTree {
     MSRUISystem *root = [[MSRUISystem alloc] initSystemWide];
-    [self walkTreeStartingAt:[root getFocusedApp] withDepth:0];
+//    [self walkTreeStartingAt:[root getFocusedApp] withDepth:0];
+    NSArray<MSRUIApp *> *uiApps = [root getRunningApplications];
+    
+    for (MSRUIApp *app in uiApps) {
+        [self walkTreeStartingAt:app withDepth:0];
+    }
 }
 
 - (void)walkTreeStartingAt:(MSRUIElement *)root withDepth:(int)depth {
@@ -171,9 +176,9 @@ void callbackFunc(AXObserverRef observer, AXUIElementRef element, CFStringRef no
     
     NSLog(@"%@", output);
     
-    for (MSRUIElement *child in [root getChildren]) {
-        [self walkTreeStartingAt:child withDepth:++depth];
-    }
+//    for (MSRUIElement *child in [root getChildren]) {
+//        [self walkTreeStartingAt:child withDepth:++depth];
+//    }
 }
 
 - (void)listenForKey {

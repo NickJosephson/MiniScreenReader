@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initSystemWide;
 - (MSRUIApp * _Nullable)getFocusedApp;
+- (NSArray<MSRUIApp *> *)getRunningApplications;
 
 @end
 
